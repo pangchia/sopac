@@ -1,19 +1,29 @@
+var direct = "DIRECT" ;
+var proxy_primary = "PROXY qCloud-lubaoqiang-10800-s5" ;
+var last_rule = "PROXY qCloud-lubaoqiang-10800-s5;PROXY office-proxy2-http;DIRECT" ;
+
+
 function FindProxyForURL(url,host)
 {
-  if(localHostOrDomainIs(host, "*.nextop.*")
-  
-  ) {
-  
-    return "DIRECT";
+
+  if(isPlainHostName(host)){
+    return direct;
   }
   
-  if(shExpMatch(url,"*.baidu.*") || 
+  if(!isResolvable(host)){
+    return proxy_primary;
+  }
+    
+  if( 
+    shExpMatch(url, "*localhost*") ||
+    shExpMatch(url, "*.nextop.*") ||
+    shExpMatch(url,"*.baidu.*") || 
     shExpMatch(url,"*.qq.*") || 
     shExpMatch(url,"*.weiyun.*") || 
     shExpMatch(url,"*.163.*") 
   
   ) {
-    return "DIRECT";
+    return direct;
   }
   
   if( shExpMatch(url, "*.google.*") ||
@@ -40,10 +50,10 @@ function FindProxyForURL(url,host)
   
   ) {
   
-    return "PROXY qCloud-lubaoqiang-10800-s5";
+    return proxy_primary;
   } 
   
   
-  return "PROXY qCloud-lubaoqiang-10800-s5;PROXY office-proxy2-http;DIRECT";
+  return last_rule;
 
 }
