@@ -7,45 +7,38 @@ function FindProxyForURL(url,host)
     return "DIRECT";
   }
   
-  if(host == "*.baidu.*" || 
-    host == "*.qq.*" || 
-    host == "*.weiyun.*" || 
-    host == "*.163.*" || 
-    host == "*.baidu.*" || 
-    host == "*.baidu.*" || 
-    host == "*.baidu.*" || 
-    host == "*.baidu.*" || 
-    host == "*.baidu.*" || 
+  if(shExpMatch(url,"*.baidu.*") || 
+    shExpMatch(url,"*.qq.*") || 
+    shExpMatch(url,"*.weiyun.*") || 
+    shExpMatch(url,"*.163.*") 
   
   ) {
     return "DIRECT";
   }
   
-  if( host == "*.google.*" ||
-    host == "*.binance.*" ||
-    host == "*.bnbstatic.*" ||
-    host == "*.google.*" ||
-    host == "*.googletagmanager.*" ||
-    host == "*.google-analytics.*" ||
-    host == "*github*" ||
-    host == "*.youtube.*" ||
-    host == "*.gstatic.*" ||
-    host == "*.bootstrapcdn.*" ||
-    host == "*.emberobserver.*" ||
-    host == "*.googleapis.*" ||
-    host == "*ember*" ||
-    host == "*fontawesome*" ||
-    host == "*facebook*" ||
-    host == "*twitter*" ||
-    host == "*slack*" ||
-    host == "*okex*" ||
-    host == "*okx*" ||
-    host == "*trello*" ||
-    host == "*jdk.java.net*" ||
-    host == "*outlook*" ||
+  if( shExpMatch(url, "*.google.*") ||
+     shExpMatch(url, "*.binance.*") ||
+     shExpMatch(url, "*.bnbstatic.*") ||
+     shExpMatch(url, "*.googletagmanager.*") ||
+     shExpMatch(url, "*.google-analytics.*") ||
+     shExpMatch(url, "*github*") ||
+     shExpMatch(url, "*.youtube.*") ||
+     shExpMatch(url, "*.gstatic.*") ||
+     shExpMatch(url, "*.bootstrapcdn.*") ||
+     shExpMatch(url, "*.emberobserver.*") ||
+     shExpMatch(url, "*ember*") ||
+     shExpMatch(url, "*fontawesome*") ||
+     shExpMatch(url, "*facebook*") ||
+     shExpMatch(url, "*twitter*") ||
+     shExpMatch(url, "*slack*") ||
+     shExpMatch(url, "*okex*") ||
+     shExpMatch(url, "*okx*") ||
+     shExpMatch(url, "*trello*") ||
+     shExpMatch(url, "*jdk.java.net*") ||
+     shExpMatch(url, "*outlook*")
+  
   
   ) {
-  
   
     return "qCloud-lubaoqiang-10800-s5";
   } 
