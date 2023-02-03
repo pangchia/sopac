@@ -1,6 +1,6 @@
 var direct = "DIRECT" ;
-var proxy_primary = "PROXY qCloud-lubaoqiang-10800-s5" ;
-var last_rule = "PROXY qCloud-lubaoqiang-10800-s5;PROXY office-proxy2-http;DIRECT" ;
+var proxy_primary = "SOCKS5 127.0.0.1:10800" ;
+var last_rule = "SOCKS5 127.0.0.1:10800;PROXY 127.0.0.1:10801;DIRECT" ;
 
 
 function FindProxyForURL(url,host)
