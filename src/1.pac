@@ -1,6 +1,11 @@
 function FindProxyForURL(url,host)
 {
-  if(host=="http://www.baidu.com/") return "DIRECT";
-  return "PROXY myproxy:80;PROXY myotherproxy:8080;DIRECT";
+  if(host=="*.baidu.*") return "DIRECT";
+  
+  
+  if(host=="*.google.*") return "qCloud-lubaoqiang-10800-s5";
+  
+  
+  return "PROXY qCloud-lubaoqiang-10800-s5;PROXY office-proxy2-http;DIRECT";
 
 }
