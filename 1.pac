@@ -20,7 +20,7 @@ function FindProxyForURL(url,host)
      shExpMatch(url, "*.binance.*") ||
      shExpMatch(url, "*.bnbstatic.*") ||
      shExpMatch(url, "*.googletagmanager.*") ||
-     shExpMatch(url, "*.google-analytics.*") ||
+     shExpMatch(url, "*google-analytics*") ||
      shExpMatch(url, "*github*") ||
      shExpMatch(url, "*.youtube.*") ||
      shExpMatch(url, "*.gstatic.*") ||
