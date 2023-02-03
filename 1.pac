@@ -40,7 +40,7 @@ function FindProxyForURL(url,host)
   
   ) {
   
-    return "qCloud-lubaoqiang-10800-s5";
+    return "PROXY qCloud-lubaoqiang-10800-s5";
   } 
   
   
