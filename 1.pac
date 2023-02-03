@@ -26,7 +26,7 @@ function FindProxyForURL(url,host)
     return direct;
   }
   
-  if( shExpMatch(url, "*.google.*") ||
+  if( shExpMatch(url, "*google*") ||
      shExpMatch(url, "*.binance.*") ||
      shExpMatch(url, "*.bnbstatic.*") ||
      shExpMatch(url, "*.googletagmanager.*") ||
