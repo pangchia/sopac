@@ -27,6 +27,7 @@ function FindProxyForURL(url,host)
   }
   
   if( shExpMatch(url, "*google*") ||
+     shExpMatch(url, "*.google.com") ||
      shExpMatch(url, "*.binance.*") ||
      shExpMatch(url, "*.bnbstatic.*") ||
      shExpMatch(url, "*.googletagmanager.*") ||
@@ -40,6 +41,7 @@ function FindProxyForURL(url,host)
      shExpMatch(url, "*fontawesome*") ||
      shExpMatch(url, "*facebook*") ||
      shExpMatch(url, "*twitter*") ||
+     shExpMatch(url, "*twimg*") ||
      shExpMatch(url, "*slack*") ||
      shExpMatch(url, "*okex*") ||
      shExpMatch(url, "*okx*") ||
