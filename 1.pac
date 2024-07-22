@@ -41,9 +41,11 @@ function FindProxyForURL(url,host)
      shExpMatch(url, "*fontawesome*") ||
      shExpMatch(url, "*facebook*") ||
      shExpMatch(url, "*twitter*") ||
+     shExpMatch(url, "*.twitter.com") ||
      shExpMatch(url, "*.x.com") ||
-     shExpMatch(url, ".twimg.com") ||
-     shExpMatch(url, "*twimg*") ||
+     shExpMatch(url, "*.twimg.com") ||
+     shExpMatch(url, "*.ads-twitter.com") ||
+     shExpMatch(url, "*.doubleclick.net") ||
      shExpMatch(url, "*slack*") ||
      shExpMatch(url, "*okex*") ||
      shExpMatch(url, "*okx*") ||
